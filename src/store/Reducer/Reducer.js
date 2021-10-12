@@ -4,7 +4,7 @@ const CardReducer = (state = initialState, action) => {
     case "GET_CARD_DATA":
       return { ...state, cardData: action.payload, loadingState: false };
     case "ERR_CARD_DATA":
-      return { ...state, cardData: action.payload };
+      return { ...state, cardData: action.payload, loadingState: true };
     default:
       return state;
   }

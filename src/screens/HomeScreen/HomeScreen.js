@@ -16,19 +16,21 @@ const HomeScreen = (props) => {
 
   return (
     <>
-      {loadingState ? (
-        <Loader />
-      ) : (
-        <div className="homescreen_container">
-          <h1 className="page_heading">just random cards</h1>
-          <div className="card_container">
-            {cardData.map((val) => {
-              return <Card key={val.id} cardData={val} />;
-            })}
-            <div className="extra_card"></div>
-          </div>
-        </div>
-      )}
+      <div className="homescreen_container">
+        <h1 className="page_heading">just random cards</h1>
+        {loadingState ? (
+          <Loader />
+        ) : (
+          <>
+            <div className="card_container">
+              {cardData.map((val) => {
+                return <Card key={val.id} cardData={val} />;
+              })}
+              <div className="extra_card"></div>
+            </div>
+          </>
+        )}
+      </div>
     </>
   );
 };
