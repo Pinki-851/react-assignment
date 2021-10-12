@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Card from "../../components/Card/Card";
 import Loader from "../../components/Loader/Loader";
