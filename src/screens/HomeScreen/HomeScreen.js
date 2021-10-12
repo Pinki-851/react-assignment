@@ -18,6 +18,19 @@ const HomeScreen = (props) => {
     <>
       <div className="homescreen_container">
         <h1 className="page_heading">just random cards</h1>
+        <p
+          style={{
+            width: "100%",
+            backgroundColor: "#000",
+            textAlign: "center",
+            position: "absolute",
+            top: "9%",
+            color: "#fff",
+          }}
+        >
+          please try again
+        </p>
+
         {loadingState ? (
           <Loader />
         ) : (
